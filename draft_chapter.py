@@ -3,46 +3,14 @@
 Draft a single chapter using the writer model.
 Usage: python draft_chapter.py 1
 """
-import os
 import re
 import sys
 from pathlib import Path
-from dotenv import load_dotenv
+from ai_client import call_writer
+
 
 BASE_DIR = Path(__file__).parent
-load_dotenv(BASE_DIR / ".env")
 
-WRITER_MODEL = os.environ.get("AUTONOVEL_WRITER_MODEL", "claude-sonnet-4-6")
-API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-API_BASE = os.environ.get("AUTONOVEL_API_BASE_URL", "https://api.anthropic.com")
-CHAPTERS_DIR = BASE_DIR / "chapters"
-
-def call_writer(prompt, max_tokens=16000):
-    import httpx
-    headers = {
-        "x-api-key": API_KEY,
-        "anthropic-version": "2023-06-01",
-        "anthropic-beta": "context-1m-2025-08-07",
-        "content-type": "application/json",
-    }
-    payload = {
-        "model": WRITER_MODEL,
-        "max_tokens": max_tokens,
-        "temperature": 0.8,
-        "system": (
-            "You are a literary fiction writer drafting a fantasy novel chapter. "
-            "You write in third-person limited past tense, locked to one POV character. "
-            "You follow the voice definition exactly. You hit every beat in the outline. "
-            "You never use words from the banned list. You show, never tell emotions. "
-            "Your prose is specific, sensory, grounded. Metaphors come from the character's "
-            "experience. You vary sentence length. You trust the reader. "
-            "You write the FULL chapter -- do not truncate, summarize, or skip ahead."
-        ),
-        "messages": [{"role": "user", "content": prompt}],
-    }
-    resp = httpx.post(f"{API_BASE}/v1/messages", headers=headers, json=payload, timeout=600)
-    resp.raise_for_status()
-    return resp.json()["content"][0]["text"]
 
 def load_file(path):
     try:

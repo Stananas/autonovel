@@ -1,68 +1,50 @@
-# Canon
+# Canon — Hard Facts Database
 
-Hard facts about the world. Every entry here is a constraint the
-evaluator checks against. If the prose contradicts canon, it's a bug.
+## Chronologie
+- **J-0, 23h00** : Début de l'astreinte de Thomas. Tout est normal à Civaux.
+- **J-0, 23h07** : Première anomalie SCADA — Tihange (Belgique) ne répond plus.
+- **J-0, 23h12** : Motif détecté — les liaisons tombent une par une.
+- **J-0, 23h31** : Appel à Gérard (PC national Paris). Confirmation : attaque interne, accréditations niveau 4.
+- **J-0, 23h45** : Thomas verrouille Civaux en mode manuel.
+- **J-0, 23h48** : Thomas télécharge les logs. Paris ne répond plus.
+- **J-0, 23h50** : Sirène PPI. Entrée dans le salon.
+- **J-0, 00h00** : Blackout total. Explosion de Civaux.
+- **J+0, 00h30** : Détour par Chauvigny. Maison d'Evan vide.
+- **J+0, 01h15** : Découverte du véhicule d'Evan. Tous morts.
+- **J+1** : Arrivée à Poitiers. Camps de réfugiés.
+- **J+4 à J+7** : Hélène commence à tousser. Départ de Poitiers.
+- **J+10 à J+11** : Mort d'Hélène.
+- **J+12** : Rencontre de Nolan.
+- **J+15** : Découverte du Protocole Aurore (Tours, faculté des sciences).
+- **J+20 à J+25** : Thomas et Camille confrontent leurs découvertes.
+- **J+35** : Arrivée au camp du Massif Central. Retrouvailles avec Maxime.
+- **J+38** : Attaque du camp par les Acteurs. Thomas capturé.
+- **J+43** : Diffusion des preuves via le nœud de communication.
+- **J+45** : Sauvetage de Thomas.
+- **J+90** : Épilogue. Ferme isolée. Nouvelle vie.
 
-This file grows during foundation and drafting. When a fact is
-established (in world.md, characters.md, or in a chapter), it gets
-logged here as canonical. The evaluator cross-references canon
-against every chapter.
+## Lieux
+- **Civaux (86)** : Centrale nucléaire (2 réacteurs, type N4). Explosion à J-0, 00h00. Zone contaminée (20km).
+- **Chauvigny (86)** : Village à 5km de Civaux. Détour au Ch3.
+- **Poitiers (86)** : Préfecture (~90 000 habitants avant). Camp de réfugiés. Zone d'étape J+1 à J+7.
+- **Tours (37)** : Faculté des Sciences. Piste Maxime. Découverte du Protocole Aurore.
+- **Massif Central** : Communauté de survivants organisée. Maxime s'y est réfugié.
 
-## How to use
+## Règles de Survie
+1. L'eau potable est la ressource la plus critique.
+2. Le carburant s'épuise — les voitures deviennent inutiles après ~2 semaines.
+3. Les armes à feu sont rares mais décisives.
+4. La contamination radioactive est invisible — sans compteur Geiger, on ne sait pas.
+5. Le froid (décembre-janvier) tue plus vite que la faim.
 
-Each entry: a short, falsifiable statement with the source.
-Group by category. Keep it flat and scannable -- this isn't prose,
-it's a database.
+## Complots et Secrets
+- **Attaque SCADA** : Cyberattaque coordonnée contre le réseau de contrôle nucléaire européen.
+- **Accréditations niveau 4** : Permissions d'ingénieur en chef. Viennent de Paris. Complicité interne.
+- **Protocole Aurore** : Plan de reconfiguration du réseau électrique européen. Objectif : contrôle privé du marché de l'énergie.
+- **Les Acteurs** : Consortium privé lié à un fonds d'investissement. A infiltré la direction d'EDF.
 
----
-
-## Geography
-<!-- Example:
-- Vael is 12 days' ride north of Tasren. (world.md)
-- The Ashenmoor lies between Vael and the Sundering Peaks. (world.md)
-- The River Kell flows south through Tasren to the sea. (ch_02)
--->
-
-## Timeline
-<!-- Example:
-- The Sundering happened 300 years before the story begins. (world.md)
-- Kael is 23 at story start. (characters.md)
-- The siege of Vael happened when Kael was 7. (ch_04)
-- Ch 1-3 span approximately 2 weeks. (outline.md)
--->
-
-## Magic System Rules
-<!-- Example:
-- All magic costs blood or memory. No exceptions. (world.md, HARD RULE)
-- A shaper cannot affect living flesh, only dead matter. (world.md)
-- Using the old tongue draws the attention of the Hollow. (ch_03)
--->
-
-## Character Facts
-<!-- Example:
-- Kael is left-handed. (ch_01)
-- Vessa has a scar across her left palm. (ch_01)
-- Moren cannot read. He hides this. (characters.md)
-- Kael's mother died in the siege of Vael. (characters.md)
--->
-
-## Political / Factional
-<!-- Example:
-- The Accord of Tasren was signed by three of the five houses. (world.md)
-- House Drennan controls the salt trade. (world.md)
-- The Temple does not recognize secular law within its walls. (ch_05)
--->
-
-## Cultural
-<!-- Example:
-- In Tasren, the dead are burned, never buried. (world.md)
-- Naming a child before its first moon is considered bad luck. (ch_06)
-- The color white is associated with mourning, not black. (world.md)
--->
-
-## Established In-Story (things that happened in chapters)
-<!-- Example:
-- Kael killed the messenger in ch_03. This cannot be undone.
-- Vessa revealed her tattoo to Moren in ch_07. He now knows.
-- The bridge at Ashenmoor was destroyed in ch_09. It's gone.
--->
+## Objets Importants
+- **Logs SCADA** : Preuves téléchargées par Thomas (Ch1) sur son disque dur local.
+- **Clé USB** : Copie des fichiers trouvés à Tours (Ch11) par Camille.
+- **Pendentif d'Evan** : Offerte à Camille. Objet-symbole porté tout le roman.
+- **Compteur Geiger** : Récupéré par Nolan. Permet de traverser les zones contaminées.

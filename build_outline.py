@@ -4,48 +4,15 @@ Rebuild outline.md from the actual chapters.
 Reads each chapter, calls the LLM for a structured summary,
 and assembles into an outline that reflects the novel as-written.
 """
-import os
 import sys
 import json
 import re
 from pathlib import Path
-from dotenv import load_dotenv
+from ai_client import call_judge
+
 
 BASE_DIR = Path(__file__).parent
-load_dotenv(BASE_DIR / ".env")
 
-JUDGE_MODEL = os.environ.get("AUTONOVEL_JUDGE_MODEL", "claude-sonnet-4-6")
-API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-API_BASE = os.environ.get("AUTONOVEL_API_BASE_URL", "https://api.anthropic.com")
-CHAPTERS_DIR = BASE_DIR / "chapters"
-
-def call_model(prompt, max_tokens=1500):
-    import httpx
-    headers = {
-        "x-api-key": API_KEY,
-        "anthropic-version": "2023-06-01",
-        "content-type": "application/json",
-    }
-    payload = {
-        "model": JUDGE_MODEL,
-        "max_tokens": max_tokens,
-        "temperature": 0.1,
-        "system": (
-            "You produce structured outline entries for novel chapters. "
-            "Be precise about what HAPPENS, what CHANGES, and what threads are planted/harvested. "
-            "Output valid JSON only."
-        ),
-        "messages": [{"role": "user", "content": prompt}],
-    }
-    resp = httpx.post(f"{API_BASE}/v1/messages", headers=headers, json=payload, timeout=120)
-    resp.raise_for_status()
-    text = resp.json()["content"][0]["text"]
-    # Extract JSON from response
-    text = text.strip()
-    if text.startswith("```"):
-        text = re.sub(r'^```\w*\n?', '', text)
-        text = re.sub(r'\n?```$', '', text)
-    return json.loads(text)
 
 def main():
     # Load supporting docs for context
@@ -80,7 +47,7 @@ Return JSON with these fields:
 
 JSON only, no other text."""
 
-        data = call_model(prompt)
+        data = call_judge(prompt)
         data["num"] = ch
         data["words"] = wc
         entries.append(data)

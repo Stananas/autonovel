@@ -4,36 +4,13 @@ Build a condensed arc summary for full-novel evaluation.
 For each chapter: first 150 words, last 150 words, plus any dialogue.
 Gives the reader panel enough to evaluate the ARC without 72k tokens.
 """
-import os
 import re
 from pathlib import Path
-from dotenv import load_dotenv
+from ai_client import call_writer
+
 
 BASE_DIR = Path(__file__).parent
-load_dotenv(BASE_DIR / ".env")
 
-WRITER_MODEL = os.environ.get("AUTONOVEL_WRITER_MODEL", "claude-sonnet-4-6")
-API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-API_BASE = os.environ.get("AUTONOVEL_API_BASE_URL", "https://api.anthropic.com")
-CHAPTERS_DIR = BASE_DIR / "chapters"
-
-def call_writer(prompt, max_tokens=4000):
-    import httpx
-    headers = {
-        "x-api-key": API_KEY,
-        "anthropic-version": "2023-06-01",
-        "content-type": "application/json",
-    }
-    payload = {
-        "model": WRITER_MODEL,
-        "max_tokens": max_tokens,
-        "temperature": 0.1,
-        "system": "You summarize novel chapters precisely. State what HAPPENS, what CHANGES, and what QUESTIONS are left open. No evaluation. No praise. Just events and shifts.",
-        "messages": [{"role": "user", "content": prompt}],
-    }
-    resp = httpx.post(f"{API_BASE}/v1/messages", headers=headers, json=payload, timeout=120)
-    resp.raise_for_status()
-    return resp.json()["content"][0]["text"]
 
 def extract_key_passages(text):
     """Get opening, closing, and best dialogue from a chapter."""

@@ -11,53 +11,23 @@ Usage:
   python review.py --output reviews.md  # Also save human-readable copy
   python review.py --parse            # Parse last review into actionable items
 """
-import os
 import sys
 import json
 import re
 import argparse
 from pathlib import Path
 from datetime import datetime
-from dotenv import load_dotenv
+from ai_client import call_review
+
 
 BASE_DIR = Path(__file__).parent
-load_dotenv(BASE_DIR / ".env", override=True)
 
 # Use Opus for reviews — it's the best at literary analysis
-REVIEW_MODEL = os.environ.get("AUTONOVEL_REVIEW_MODEL", "claude-opus-4-6")
-API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-API_BASE = os.environ.get("AUTONOVEL_API_BASE_URL", "https://api.anthropic.com")
 
-CHAPTERS_DIR = BASE_DIR / "chapters"
-LOGS_DIR = BASE_DIR / "edit_logs"
 
 REVIEW_PROMPT = """Read the below novel, "{title}". Review it first as a literary critic (like a newspaper book review) and then as a professor of fiction. In the later review, give specific, actionable suggestions for any defects you find. Be fair but honest. You don't *have* to find defects.
 
 {manuscript}"""
-
-
-def call_opus(prompt, max_tokens=8000):
-    """Call Opus with the full manuscript."""
-    import httpx
-    headers = {
-        "x-api-key": API_KEY,
-        "anthropic-version": "2023-06-01",
-        "anthropic-beta": "context-1m-2025-08-07",
-        "content-type": "application/json",
-    }
-    payload = {
-        "model": REVIEW_MODEL,
-        "max_tokens": max_tokens,
-        "temperature": 0.3,
-        "messages": [{"role": "user", "content": prompt}],
-    }
-    print(f"Sending to {REVIEW_MODEL} ({len(prompt):,} chars)...", file=sys.stderr)
-    resp = httpx.post(
-        f"{API_BASE}/v1/messages",
-        headers=headers, json=payload, timeout=600,
-    )
-    resp.raise_for_status()
-    return resp.json()["content"][0]["text"]
 
 
 def get_title():
@@ -212,7 +182,7 @@ def cmd_review(args):
     
     prompt = REVIEW_PROMPT.format(title=title, manuscript=manuscript)
     
-    review_text = call_opus(prompt)
+    review_text = call_review(prompt)
     
     # Save raw review
     LOGS_DIR.mkdir(exist_ok=True)
@@ -280,7 +250,7 @@ def main():
     args = parser.parse_args()
     
     if not API_KEY:
-        print("ERROR: ANTHROPIC_API_KEY not set in .env", file=sys.stderr)
+        print("ERROR: No API key found. Ensure a valid API key is configured.", file=sys.stderr)
         sys.exit(1)
     
     if args.parse:

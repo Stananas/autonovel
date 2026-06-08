@@ -1,11 +1,16 @@
 {
   "phase": "foundation",
-  "current_focus": null,
-  "iteration": 0,
-  "foundation_score": 0.0,
-  "lore_score": 0.0,
-  "chapters_drafted": 0,
-  "chapters_total": 0,
+  "current_focus": "Ch 1-3 draft imported, foundation files created",
+  "iteration": 1,
+  "foundation_score": 7.5,
+  "lore_score": 7.0,
+  "chapters_drafted": 3,
+  "chapters_total": 23,
   "novel_score": 0.0,
-  "debts": []
+  "debts": [
+    "Ch 2 has two versions (v1 short, v2 long) — reconcile or pick",
+    "Ch 3 outline only — need full draft",
+    "Voice Part 2 exemplar passages not yet written",
+    "Ch 4-23 outlines set but not drafted"
+  ]
 }

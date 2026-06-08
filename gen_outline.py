@@ -1,41 +1,12 @@
 #!/usr/bin/env python3
 """Generate outline.md from seed + world + characters + mystery + craft."""
-import os
 import sys
 from pathlib import Path
-from dotenv import load_dotenv
+from ai_client import call_writer
+
 
 BASE_DIR = Path(__file__).parent
-load_dotenv(BASE_DIR / ".env")
 
-WRITER_MODEL = os.environ.get("AUTONOVEL_WRITER_MODEL", "claude-sonnet-4-6")
-API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-API_BASE = os.environ.get("AUTONOVEL_API_BASE_URL", "https://api.anthropic.com")
-
-def call_writer(prompt, max_tokens=16000):
-    import httpx
-    headers = {
-        "x-api-key": API_KEY,
-        "anthropic-version": "2023-06-01",
-        "anthropic-beta": "context-1m-2025-08-07",
-        "content-type": "application/json",
-    }
-    payload = {
-        "model": WRITER_MODEL,
-        "max_tokens": max_tokens,
-        "temperature": 0.5,
-        "system": (
-            "You are a novel architect with deep knowledge of Save the Cat beats, "
-            "Sanderson's plotting principles, Dan Harmon's Story Circle, and MICE Quotient. "
-            "You build outlines that an author can draft from without inventing structure "
-            "on the fly. Every chapter has beats, emotional arc, and try-fail cycle type. "
-            "You never use AI slop words. You write in clean, direct prose."
-        ),
-        "messages": [{"role": "user", "content": prompt}],
-    }
-    resp = httpx.post(f"{API_BASE}/v1/messages", headers=headers, json=payload, timeout=600)
-    resp.raise_for_status()
-    return resp.json()["content"][0]["text"]
 
 seed = (BASE_DIR / "seed.txt").read_text()
 world = (BASE_DIR / "world.md").read_text()

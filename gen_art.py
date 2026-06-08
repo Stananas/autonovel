@@ -21,7 +21,6 @@ Post-processing:
 Full pipeline:
   python gen_art.py all                      # style → curate → batch → vectorize
 """
-import os
 import sys
 import json
 import re
@@ -30,24 +29,14 @@ import shutil
 import argparse
 import subprocess
 from pathlib import Path
-from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).parent
-load_dotenv(BASE_DIR / ".env", override=True)
 
 FAL_KEY = os.environ.get("FAL_KEY", "")
 FAL_URL = "https://fal.run/fal-ai/nano-banana-2"
 FAL_EDIT_URL = "https://fal.run/fal-ai/nano-banana-2/edit"
 
-ART_DIR = BASE_DIR / "art"
-VARIANTS_DIR = ART_DIR / "variants"
-SVG_DIR = ART_DIR / "svg"
-STYLE_FILE = ART_DIR / "visual_style.json"
-PICKS_FILE = ART_DIR / "picks.json"
 
-WRITER_MODEL = os.environ.get("AUTONOVEL_WRITER_MODEL", "claude-sonnet-4-6")
-ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-ANTHROPIC_BASE = os.environ.get("AUTONOVEL_API_BASE_URL", "https://api.anthropic.com")
 
 
 # ============================================================
@@ -105,32 +94,13 @@ def fal_edit(prompt, image_urls, resolution="1K", aspect_ratio="1:1", seed=None)
 
 def download_image(url, dest_path):
     import httpx
+    from ai_client import call_writer
+
     resp = httpx.get(url, timeout=60, follow_redirects=True)
     resp.raise_for_status()
     dest_path.parent.mkdir(parents=True, exist_ok=True)
     dest_path.write_bytes(resp.content)
     return len(resp.content)
-
-
-def call_claude(prompt, max_tokens=1500):
-    import httpx
-    resp = httpx.post(
-        f"{ANTHROPIC_BASE}/v1/messages",
-        headers={
-            "x-api-key": ANTHROPIC_KEY,
-            "anthropic-version": "2023-06-01",
-            "content-type": "application/json",
-        },
-        json={
-            "model": WRITER_MODEL,
-            "max_tokens": max_tokens,
-            "temperature": 0.3,
-            "messages": [{"role": "user", "content": prompt}],
-        },
-        timeout=120,
-    )
-    resp.raise_for_status()
-    return resp.json()["content"][0]["text"]
 
 
 def load_style():
@@ -197,7 +167,7 @@ Define a VISUAL STYLE for all art in this novel. Output valid JSON:
 JSON only."""
 
     print("Deriving visual style from world + voice...")
-    result = call_claude(prompt)
+    result = call_writer(prompt)
     text = result.strip()
     if text.startswith("```"):
         text = re.sub(r'^```\w*\n?', '', text)

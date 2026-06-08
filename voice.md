@@ -120,38 +120,22 @@ The agent proposes a voice that serves THIS story, writes exemplar
 passages, and calibrates against them throughout drafting.
 
 ### Tone
-<!-- Generated during foundation. Examples:
-     "Mythic and weighty, like stone tablets being read aloud."
-     "Warm, slightly breathless, like a traveler telling stories by firelight."
-     "Spare and cold. Sentences like knife cuts." -->
+Réaliste, tendu, intime. La tension monte comme la pression dans une cuve — invisible d'abord, puis inévitable. Les moments calmes sont lourds de ce qui va venir. Les moments de crise sont précis, sensoriels, désorientants. Le quotidien et l'apocalypse cohabitent dans la même soirée. Le langage est celui d'un roman français contemporain — pas de lyrisme fantastique, pas de détours poétiques. La peur s'écrit dans les gestes : une main qui tremble, le bruit du verre qui éclate, le noir après le flash.
 
 ### Sentence Rhythm
-<!-- Generated during foundation. Not rules -- tendencies.
-     "Long sentences for worldbuilding, short for violence."
-     "Dialogue is clipped. Narration flows." -->
+Alternance de phrases longues, techniques, presque cliniques (quand Thomas analyse les données SCADA) et de phrases courtes, hachées, vitales (quand l'explosion frappe). Les moments de Camille privilégient le flux de conscience, les pensées qui se bousculent, les phrases qui s'interrompent. Les descriptions sont précises, documentaires — on sait ce qu'on voit, on le voit comme un technicien ou comme une fille de seize ans, jamais comme un poème.
 
 ### Vocabulary Register
-<!-- Generated during foundation. The word-hoard for this world.
-     What does this world SOUND like? Anglo-Saxon blunt? Latinate
-     baroque? Colloquial modern? A mix? -->
+Français contemporain oral et technique. Le registre d'ingénieur : SCADA, barres de contrôle, pressuriseur, débit de refroidissement. Le registre adolescent : « sérieux », « trop », les phrases qui tombent comme des textos. Le registre parental : la voix qui se veut calme et qui craque sous la pression. La narration passe de l'un à l'autre selon le point de vue, sans prévenir, comme on change de chaise dans une pièce.
 
 ### POV and Tense
-<!-- Generated during foundation.
-     Third limited? First? Rotating? Omniscient?
-     Past tense? Present? Does it shift for effect? -->
+Présent. Focalisation externe-interne alterne entre les personnages selon les chapitres : principalement Thomas (le technicien, celui qui sait) et Camille (la survivante, celle qui apprend). Parfois Hélène, parfois Nolan. Jamais omniscient — on est dans une tête à la fois, on ne sait que ce qu'elle sait.
 
 ### Dialogue Conventions
-<!-- Generated during foundation.
-     Tags: "said" only? Action beats? No tags at all?
-     How do characters sound different from each other?
-     Subtext rules: do characters say what they mean? -->
+Tirets cadratins (—) pour ouvrir les dialogues. Pas d'incises autour des tirets. Quand un personnage parle puis agit, rupture de ligne, retour à la ligne avec un nouveau tiret s'il reprend la parole. Les personnages s'interrompent, se coupent la parole. Personne ne termine ses phrases comme dans un script — ils parlent vrai, avec des faux départs, des lapsus, des silences qui veulent dire plus que les mots. Les émotions passent par ce qui n'est pas dit.
 
 ### Exemplar Passages
-<!-- 3-5 paragraphs that ARE the voice. Written during foundation.
-     The agent calibrates every chapter against these.
-     These are the tuning fork. -->
+<!-- À écrire après la phase fondation : 3-5 paragraphes qui sont LA voix. -->
 
 ### Anti-Exemplars
-<!-- 3-5 paragraphs showing what this voice is NOT.
-     Not the generic anti-slop stuff above -- specific to this novel.
-     "This is too flowery for our tone." "This is too modern." -->
+<!-- 3-5 paragraphes montrant ce que cette voix n'est PAS. -->

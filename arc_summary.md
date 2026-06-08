@@ -7,7 +7,7 @@
 **ÉCRIT** — Camille rit au téléphone avec Evan. La sirène PPI déchire la nuit. Thomas apparaît. Dernier appel avec Evan, puis silence. Panique dans la maison, le verre de Sacha explose. Fuite vers le garage. Minuit sonne, blackout, flash bleu-blanc. Le sol se soulève.
 
 ## Ch 3 — Le Détour (POV Camille)
-**PLAN** — Détour par Chauvigny. Maison d'Evan vide. Embouteillage sur la route. Camille reconnaît la voiture d'Evan — tous morts. Premier deuil. La fin de l'enfance.
+**ÉCRIT** — Détour par Chauvigny. Maison d'Evan vide, porte ouverte, signes de fuite précipitée. Embouteillage sur la nationale. Camille sort de la voiture, cherche le break bleu de la famille d'Evan. Elle le trouve — mais les occupants sont morts, le véhicule accidenté. Elle ne dit rien à sa famille. Fin du chapitre : fuite par les champs, le deuil silencieux commence.
 
 ## Ch 4 à 23
 **À ÉCRIRE** — Voir outline.md pour le plan complet.

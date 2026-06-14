@@ -31,8 +31,13 @@ interne. Hélène tousse. Décision de quitter Poitiers.
 Hélène s'effondre. Dernière conversation mère-fille.
 
 ## Ch 8 — La Nuit la Plus Longue (POV Thomas)
-**ÉCRIT** — Mort d'Hélène. Dernières paroles. Enterrement 
-sous un chêne. La promesse.
+**ÉCRIT** — Sacha veille sa mère toute la nuit, refuse de
+partir. Derniers mots d'Hélène, souvenirs partagés. La mort,
+Sacha qui secoue la main en criant « Reviens » — Camille le
+console, craque pour la première fois. Enterrement au pied
+d'un chêne. Sacha pose un caillou blanc sur la tombe. « Au
+revoir maman. » Le silence dans la voiture est une cinquième
+personne.
 
 ## Ch 9 — La Rencontre (POV Camille)
 **PLAN** — Nolan apparaît. Danger. Alliance forcée.

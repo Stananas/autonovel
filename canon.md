@@ -34,7 +34,7 @@
 1. L'eau potable est la ressource la plus critique.
 2. Le carburant s'épuise — les voitures deviennent inutiles après ~2 semaines.
 3. Les armes à feu sont rares mais décisives.
-4. La contamination radioactive est invisible — sans compteur Geiger, on ne sait pas.
+4. **La contamination radioactive est invisible et mortelle. Une exposition brève au nuage de Civaux (J-0) suffit à déclencher un syndrome d'irradiation aiguë mortel en 10-14 jours. Les symptômes apparaissent en cascade : nausées (J+1), toux + fièvre (J+4), perte de cheveux (J+8), défaillance respiratoire (J+10). Sans traitement, c'est la mort.**
 5. Le froid (décembre-janvier) tue plus vite que la faim.
 
 ## Complots et Secrets

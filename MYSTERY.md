@@ -28,11 +28,13 @@ Les Accréditations niveau 4 viennent de Paris. Les logs ont été effacés — 
 
 ## La vérité ultime (connue uniquement de l'auteur)
 
-Les Acteurs ont réussi. Le blackout est irréversible. Le Protocole Aurore s'est exécuté comme prévu — le réseau européen est verrouillé, et les fonds d'investissement préparent leur « offre de reconstruction ». Thomas et Camille n'ont pas pu l'arrêter.
+Les Acteurs ont réussi — en partie. Le blackout européen est irréversible. Le Protocole Aurore s'est exécuté sur le Vieux Continent. Mais ce que Thomas découvre dans le PC des Acteurs (Ch 22), c'est que l'Europe n'était qu'un **théâtre**. La même opération a été exécutée simultanément sur tous les continents — États-Unis, Japon, Russie, Chine — chaque grande puissance nucléaire a vu ses中央es tomber le même soir.
 
-Ce qu'ils ont fait, c'est **révéler la vérité** avant que les Acteurs ne puissent effacer toutes les traces. La diffusion des preuves (Ch 21) ne stoppe pas le blackout, mais elle empêche les Acteurs de prendre le contrôle total sans conséquences.
+Le Protocole Aurore est un plan mondial de reconfiguration énergétique. Les Acteurs ne sont pas un consortium français — ils sont une organisation internationale, avec des ramifications dans chaque pays.
 
-Le roman ne se termine pas par la victoire. Il se termine par la **résistance**. Le monde est cassé — mais il n'appartient pas aux Acteurs.
+Le livre 1 raconte l'histoire française. Les livres suivants raconteront les autres fronts. Les personnages se croiseront via la radio — et peut-être physiquement, un jour.
+
+Le vrai combat n'est pas d'arrêter le blackout. C'est de reconstruire un monde connecté.
 
 ## Ce que les personnages ne sauront jamais
 

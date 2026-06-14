@@ -201,20 +201,23 @@ Retrouvailles avec Maxime. Découverte de l'ampleur du complot. Confrontation av
 
 ### Ch 22 — Retrouvailles
 **POV**: Thomas | **Date**: J+45
-- Thomas, détenu, interrogé. Il refuse de parler. Il sait qu'il va mourir.
+- Thomas, détenu, interrogé. Les Acteurs veulent les données. Il refuse.
 - Camille, Nolan et Maxime montent une opération de sauvetage.
 - Extraction risquée. Thomas est sauvé — mais blessé.
-- Dernière scène : la famille réunie, brisée mais vivante, dans un monde qui ne sera plus jamais le même.
-- **Beat**: La rédemption de Thomas. Il a sauvé sa famille.
-- **Graine**: Le combat est fini — mais la reconstruction commence.
+- Avant de fuir, Thomas vole un dossier dans le PC des Acteurs : une carte du monde. Des points sur tous les continents. Des中央es nucléaires ciblées partout. Civaux n'était pas un accident isolé — c'était le premier domino d'un plan mondial.
+- **Beat**: Le complot est global. Ce qu'ils ont vécu en France n'est qu'une pièce du puzzle.
+- **Graine**: D'autres survivants, ailleurs dans le monde, vivent la même chose.
 
-### Ch 23 — Épilogue : Le Printemps
+### Ch 23 — Épilogue : La Voix dans la Nuit
 **POV**: Camille | **Date**: J+90, février
-- Trois mois plus tard. Le groupe a trouvé un lieu sûr — une ferme isolée.
-- La vie renaît. Camille écrit son histoire. Sacha joue. Nolan sourit.
-- Thomas marche jusqu'à la colline et regarde l'horizon. Les tours sont tombées, mais le soleil se lève.
-- Dernière image : Camille touche le pendentif d'Evan, puis se tourne vers Nolan.
-- **Beat**: L'espoir. Survivre n'est pas assez — il faut vivre.
+- Trois mois plus tard. Le groupe s'est installé dans une ferme isolée du Massif Central.
+- La vie renaît lentement. Camille écrit son histoire. Sacha joue. Nolan sourit.
+- Thomas a monté un poste radio dans la grange. Il écoute les fréquences, soir après soir. Il sait que le protocole Aurore est mondial — il cherche des signes, d'autres survivants, ailleurs.
+- Une nuit, une voix traverse les parasites. Une femme, qui parle anglais avec un accent — Japon ? Australie ? Elle dit un nom de code : « Opération Dawn ». Puis la fréquence devient silencieuse.
+- Thomas note la fréquence, le jour, l'heure. Il regarde la carte du monde punaisée au mur. Des points sur tous les continents.
+- Dernière image : Camille touche le pendentif d'Evan, puis regarde par la fenêtre. Le monde est cassé. Mais ils ne sont pas seuls.
+- **Beat**: L'espoir — mais aussi l'ouverture. Le vrai combat commence ailleurs.
+- **Graine**: La voix sur la radio. L'Opération Dawn. Le livre 2.
 
 ---
 
@@ -233,3 +236,5 @@ Retrouvailles avec Maxime. Découverte de l'ampleur du complot. Confrontation av
 | Nolan cache son passé | 9 | 12 | Révélation partielle de son histoire |
 | Maxime connaît un nom | 17 | 18 | Lien vers les Acteurs |
 | Copie partielle du fichier | 19 | 20, 21 | Camille garde une sauvegarde cachée |
+| Carte du monde des中央es | 22 | 23 | Le complot est global |
+| La voix radio — Opération Dawn | 23 | Livre 2 | Première connexion internationale |
